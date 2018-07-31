@@ -26,6 +26,15 @@ switch ($color) {
 }
 
 
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+var_dump(dirname(__FILE__));
+
+
 
 
 
