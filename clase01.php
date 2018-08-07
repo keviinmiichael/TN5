@@ -6,7 +6,9 @@
         <link rel="stylesheet" href="/css/master.css">
     </head>
     <body>
-        <pre>
+        <?php require_once('navbar.php') ?>
+        
+
         <?php
             $usuario = [
                 'name' => 'Kevin',
@@ -22,6 +24,8 @@
             }
 
         ?>
+
+        <?php include('footer.php') ?>
     </body>
 
 
