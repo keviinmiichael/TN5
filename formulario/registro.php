@@ -27,6 +27,8 @@
 		if (empty($errores)) {
 			// En la variable $usuario, guardo al usuario creado con la función crearUsuario() la cual recibe los datos de $_POST y el avatar
 			guardarUsuario($_POST);
+
+			header('location:exito.php?estado=registro');
 		}
 	}
 ?>
