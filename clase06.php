@@ -5,7 +5,7 @@ $text = " es un lenguaje de programación de uso general de código del lado del
 $paises = ['Argentina', 'Brasil', 'Colombia', 'Chile','Bolivia','Uruguay', "Bratislava", "Antigua y Barbura"];
 $name ='';
 $email ='';
-$pais ='';
+$paisSeleccionado = count($paises);
 $errores = [];
 
 if ($_POST) {
@@ -22,7 +22,7 @@ $paisSeleccionado = trim($_POST['pais']);
     }elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errores['email']= "POR FAVOR COMPLETA TU EMAIL CON FORMATO VALIDO";
     }
-    if ($paisSeleccionado == null) {
+    if ($paisSeleccionado == '') {
         $errores['pais']= "POR FAVOR COMPLETA TU PAIS";
     }
 
@@ -58,8 +58,9 @@ $paisSeleccionado = trim($_POST['pais']);
                  <?php foreach ($paises as $key => $pais): ?>
                      <?php if ($paisSeleccionado == $key ): ?>
                          <option selected value="<?=$key?>"><?=$pais?></option>
+                     <?php else: ?>
+                         <option value="<?=$key?>"><?=$pais?></option>
                      <?php endif; ?>
-                     <option value="<?=$key?>"><?=$pais?></option>
                  <?php endforeach; ?>
              </select>
              <br><br>
