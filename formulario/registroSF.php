@@ -52,7 +52,7 @@
 		<?php endif; ?>
 
 		<div class="data-form">
-			<form  method="post" enctype="multipart/form-data">
+			<form  method="post">
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="form-group <?= isset($errores['name']) ? 'has-error' : null ?>">
@@ -118,16 +118,6 @@
 								<?= isset($errores['pais']) ? $errores['pais'] : ''; ?>
 							</span>
 		            </div>
-					</div>
-					<div class="col-xs-6">
-						<div class="form-group <?= isset($errores['avatar']) ? 'has-error' : null ?>">
-							<label for="name" class="control-label">Subir imagen:</label>
-							<input class="form-control" type="file" name="avatar" value="<?= isset($_FILES['avatar']) ? $_FILES['avatar']['name'] : null ?>">
-							<span class="help-block" style="<?= !isset($errores['avatar']) ? 'display: none;' : '' ; ?>">
-								<b class="glyphicon glyphicon-exclamation-sign"></b>
-								<?= isset($errores['avatar']) ? $errores['avatar'] : '' ;?>
-							</span>
-						</div>
 					</div>
 				</div>
 

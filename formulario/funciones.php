@@ -36,7 +36,9 @@ function guardarUsuario($data){
         "pais" => $data['pais'],
         "pass" => password_hash($data['pass'], PASSWORD_DEFAULT),
     ];
+
     $usuarioJSON = json_encode($usuario);
+
 
     file_put_contents('usuarios.json', $usuarioJSON . PHP_EOL, FILE_APPEND);
 
@@ -53,7 +55,8 @@ function traerTodos(){
     foreach ($arrayDeJSON as $key => $unUsuarioJSON) {
         $arrayPHP[] = json_decode($unUsuarioJSON, true);
     }
-
+    echo "<pre>";
+    var_dump($arrayPHP);exit;
     return $arrayPHP;
 }
 
