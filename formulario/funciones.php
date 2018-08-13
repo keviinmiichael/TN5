@@ -79,7 +79,7 @@ function traerEmail($email){
     return false;
 }
 
-functioncd  guardarFoto($data){
+function guardarFoto($data){
     $errores = [];
     $ext = strtolower(pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION));
     if ($ext == 'jpg' || $ext == 'png' || $ext == 'jpeg') {
