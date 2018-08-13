@@ -1,4 +1,3 @@
-{"name":"kevin","email":"kevin@kevin.com","pais":"Colombia","pass":"$2y$10$Bvsgq.61T9crS0IHzgI9ce6Tlld2\/s13o8QULg3\/bwY8mlw12wXo2"}
-{"name":"javi","email":"javi@javi.com","pais":"Colombia","pass":"$2y$10$Gw9S041RivFP0NTOivCceeOWfl2HK3Psa98MQGYaGfGPPnSjXBVEq"}
-{"name":"fran","email":"fran@fran.com","pais":"Brasil","pass":"$2y$10$2BIEte5MVhBQDzoAqjvDa.e5CaTpN0eQWN9ncHBM1KbOacPMcrYni"}
-{"name":"nacho","email":"nacho@nacho.com","pais":"Colombia","pass":"$2y$10$RhI.YnAfOiglJisezttYYelTE2F5wOuRf2qUQDyZ8Ti\/YVINgt\/Qm"}
+{"id":1,"name":"asd","email":"asd@asd.com","pais":"Colombia","pass":"$2y$10$if\/CJhFGqiMn0vwG9GbS3OTI5u4Jr64v\/fy9JgrskvMcGl12abkKK","src":"img\/asd@asd.com."}
+{"id":2,"name":"nacho","email":"nacho@asd.com","pais":"Brasil","pass":"$2y$10$B0VoCL6g3CfaE6dzIOdvr.JqMEtMJDNkz9bD6AXWkU7Z.16RIGIli","src":"img\/nacho@asd.com."}
+{"id":3,"name":"juan","email":"juan@asd.com","pais":"Brasil","pass":"$2y$10$4hfrfUiK9jcdiqh3rjjHT.Fg5ZWltxD8nRkV.7zq37Xlds8fWAZnG","src":"img\/juan@asd.com.png"}

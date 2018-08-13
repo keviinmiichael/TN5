@@ -1,7 +1,5 @@
 <?php
 	require_once('funciones.php');
-
-
 	// Variables para persistencia
 	$email = '';
 
@@ -12,21 +10,20 @@
 	if ($_POST) {
 		$email = trim($_POST['email']);
 
-		$errores = validarLogin($_POST);
+		$errores = validarLogin($data);
 
 		if (empty($errores)) {
-			$usuario = existeEmail($email);
+			//logueo al usuario
 
-			loguear($usuario);
-
-			// Seteo la cookie
-			if (isset($_POST["recordar"])) {
-	        setcookie('id', $usuario['id'], time() + 3600 * 24 * 30);
-	      }
-
-			header('location: perfil.php');
-			exit;
+		if (isset($_POST['recordar'])) {
+			//recordar al usuario
 		}
+
+		header('location:exito.php?estado=login');
+
+
+		}
+
 	}
 ?>
 <!DOCTYPE html>

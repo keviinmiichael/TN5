@@ -25,10 +25,16 @@
 
 		// Si el array de errorres está vacío, es porque no hubo errores, por lo tanto procedo con lo siguiente
 		if (empty($errores)) {
-			// En la variable $usuario, guardo al usuario creado con la función crearUsuario() la cual recibe los datos de $_POST y el avatar
-			guardarUsuario($_POST);
 
-			header('location:exito.php?estado=registro');
+			$errores = guardarFoto($_POST);
+			// En la variable $usuario, guardo al usuario creado con la función crearUsuario() la cual recibe los datos de $_POST y el avatar
+			if (empty($errores)) {
+				guardarUsuario($_POST,'avatar');
+				header('location:exito.php?estado=registro');
+			}
+
+
+
 		}
 	}
 ?>
