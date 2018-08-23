@@ -10,16 +10,18 @@
 	if ($_POST) {
 		$email = trim($_POST['email']);
 
-		$errores = validarLogin($data);
+		$errores = validarLogin($_POST);
 
 		if (empty($errores)) {
-			//logueo al usuario
+			$usuario = traerEmail($email);
 
-		if (isset($_POST['recordar'])) {
-			//recordar al usuario
-		}
+			logear($usuario);
 
-		header('location:exito.php?estado=login');
+			if (isset($_POST['recordar'])) {
+				setcookie('id', $usuario['id'], time() + 3600 );
+			}
+
+		// header('location:exito.php?estado=login');
 
 
 		}

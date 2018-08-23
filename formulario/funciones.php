@@ -1,4 +1,17 @@
 <?php
+session_start();
+
+if (isset($_COOKIE['id'])) {
+    $usuario = traerPorID($_COOKIE['id']);
+    logear($usuario);
+}
+
+if (estalogeado()) {
+    header('location:exito.php');
+}else {
+    header('location:login.php');
+}
+
 
 function validar($data){
     $name = trim($data['name']);
@@ -134,4 +147,13 @@ function traerUltimoID(){
     $ultimoID = $ultimo['id'];
 
     return $ultimoID +1;
+}
+
+
+function logear($usuario){
+    $_SESSION['id'] = $usuario['id'];
+}
+
+function estalogeado(){
+    return isset($_SESSION['id']);
 }

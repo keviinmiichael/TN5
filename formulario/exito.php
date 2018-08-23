@@ -1,4 +1,6 @@
 <?php
+require_once('funciones.php');
+
 
 if ($_GET['estado'] == 'registro') {
     echo "<h1>WIIII ME REGISTRE</h1>";
